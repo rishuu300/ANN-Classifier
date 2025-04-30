@@ -7,26 +7,19 @@ import tensorflow as tf
 from tensorflow.keras.models import load_model
 from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder
 
-# artifacts_dir = 'D:\\Udemy\\Gen AI\\Projects\\ANN Classification\\artifacts'
-
 # Load the model
-artifacts_dir = os.path.join('artifacts')  # relative path
-model_path = os.path.join(artifacts_dir, 'model.h5')
-model = tf.keras.models.load_model(model_path)
+model = tf.keras.models.load_model('model.h5')
 
 # Load label encoder
-label_encoder_path = os.path.join(artifacts_dir, 'label_encoder.pkl')
-with open(label_encoder_path, 'rb') as file:
+with open('label_encoder.pkl', 'rb') as file:
     label_encoder = pickle.load(file)
 
 # Load one-hot encoder
-onehot_encoder_path = os.path.join(artifacts_dir, 'onehot_encoder.pkl')
-with open(onehot_encoder_path, 'rb') as file:
+with open('onehot_encoder.pkl', 'rb') as file:
     onehot_encoder = pickle.load(file)
 
 # Load scaler
-scaler_path = os.path.join(artifacts_dir, 'scaler.pkl')
-with open(scaler_path, 'rb') as file:
+with open('scaler.pkl', 'rb') as file:
     scaler = pickle.load(file)
     
 
