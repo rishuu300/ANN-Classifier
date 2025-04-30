@@ -4,6 +4,7 @@ import pickle
 import numpy as np
 import pandas as pd
 import tensorflow as tf
+from tensorflow.keras.models import load_model
 from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder
 
 # artifacts_dir = 'D:\\Udemy\\Gen AI\\Projects\\ANN Classification\\artifacts'
@@ -11,7 +12,7 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder
 # Load the model
 artifacts_dir = os.path.join('artifacts')  # relative path
 model_path = os.path.join(artifacts_dir, 'model.h5')
-model = tf.keras.models.load_model(model_path) # type: ignore
+model = tf.keras.models.load_model(model_path)
 
 # Load label encoder
 label_encoder_path = os.path.join(artifacts_dir, 'label_encoder.pkl')
