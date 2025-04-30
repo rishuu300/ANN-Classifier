@@ -8,7 +8,7 @@ from tensorflow.keras.models import load_model
 from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder
 
 # Load the model
-model = tf.keras.models.load_model('model.h5')
+model = load_model('model.h5')
 
 # Load label encoder
 with open('label_encoder.pkl', 'rb') as file:
